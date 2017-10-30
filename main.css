@@ -1,0 +1,13 @@
+body {
+    background: #eee;
+}
+
+.car {
+    font-size: 16px;
+    color: steelblue;
+}
+
+.discounted {
+    font-weight: bold;
+    color: red;
+}
