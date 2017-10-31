@@ -1,9 +1,11 @@
-/* globals Car */
+/* globals cars */
 
-const pinto = new Car('Ford', 'Pinto', 1979, 'limegreen');
-// const fiat = new Car('Fiat', '500', 2015, 'red');
+const app = document.getElementById('app');
 
-pinto.addBid('marty', 2.00);
-pinto.addBid('joey', 3.00);
+function loadCars(cars) {
+    for(let i = 0; i < cars.length; i++) {
+        app.appendChild(cars[i].render());
+    }
+}
 
-document.body.appendChild(pinto.render());
+loadCars(cars);

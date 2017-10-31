@@ -16,29 +16,6 @@ function Car(make, model, year, color) {
     this.bidRows = null;
 }
 
-function createBidTable() {
-    const table = document.createElement('TABLE');
-    table.classList.add('bids');
-    const header = document.createElement('THEAD');
-    const headerRow = document.createElement('TR');
-    header.appendChild(headerRow);
-
-    const nameHeader = document.createElement('TH');
-    nameHeader.textContent = 'Name';
-    nameHeader.classList.add('name');
-    headerRow.appendChild(nameHeader);
-
-    const amountHeader = document.createElement('TH');
-    amountHeader.textContent = 'Amount';
-    amountHeader.classList.add('amount');
-
-    headerRow.appendChild(amountHeader);
-
-    table.appendChild(header);
-
-    return table;
-}
-
 Car.prototype.render = function() {
     const div = document.createElement('DIV');
 
@@ -70,6 +47,30 @@ Car.prototype.render = function() {
 
     return div;
 };
+
+
+function createBidTable() {
+    const table = document.createElement('TABLE');
+    table.classList.add('bids');
+    const header = document.createElement('THEAD');
+    const headerRow = document.createElement('TR');
+    header.appendChild(headerRow);
+
+    const nameHeader = document.createElement('TH');
+    nameHeader.textContent = 'Name';
+    nameHeader.classList.add('name');
+    headerRow.appendChild(nameHeader);
+
+    const amountHeader = document.createElement('TH');
+    amountHeader.textContent = 'Amount';
+    amountHeader.classList.add('amount');
+
+    headerRow.appendChild(amountHeader);
+
+    table.appendChild(header);
+
+    return table;
+}
 
 Car.prototype.addBid = function(name, amount) {
     const bid = new Bid(name, amount);
